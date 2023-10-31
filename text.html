@@ -1,0 +1,360 @@
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="">
+   <style>
+
+
+    body{
+       justify-content: center;
+       display: flex;
+       align-items: center;
+       min-height: 100vh;
+    }
+
+    input, label{
+        position: relative;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin-left: 23%;
+        margin-top: 1%;
+        top: 50px;
+        display: block;
+        border: 1px solid;
+        
+    }
+
+    input{
+        width: 280px;
+        height: 35px;
+    }
+
+
+    .div1{
+        border: 1px solid;
+       width: 500px;
+    }
+
+    .div2{
+        justify-content: center;
+        min-width: 50vh;
+        align-items: center;
+      
+        border: 1px solid;
+        height: 500px;
+        width: 100%;
+    }
+
+   </style>
+ </head>
+ <body>
+    <div class="div1">
+        <div class="div2">
+            <label for="">Nom:</label> 
+            <input type="text">
+            <label for="">E-mail:</label> 
+            <input type="text">
+            <label for="">Mot de passe:</label> 
+            <input type="text">
+        </div>
+       
+    </div>
+ </body>
+ </html> -->
+
+
+
+
+ <!-- :::::::::::::::::::::::::::::::::::::::::::::::::dashboard:::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+ <!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dashboard</title>
+     <style>
+         body {
+             margin: 0;
+             padding: 0;
+             font-family: Arial, sans-serif;
+             background-color: #f0f0f0;
+         }
+ 
+         .dashboard {
+             background-color: #495E7B;
+             color: #ffffff;
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             padding: 10px 20px;
+         }
+ 
+         .logo {
+             margin-right: 20px;
+         }
+ 
+         .logo img {
+             width: 50px;
+             height: 50px;
+         }
+ 
+         .menu {
+             display: flex;
+             align-items: center;
+             gap: 20px;
+         }
+ 
+         .menu a {
+             color: #ffffff;
+             text-decoration: none;
+             font-weight: 600;
+             transition: color 0.3s ease;
+         }
+ 
+         .menu a:hover {
+             color: #495E7B;
+         }
+ 
+         .search-bar {
+             display: flex;
+             align-items: center;
+             background-color: #ffffff;
+             border-radius: 5px;
+             padding: 5px;
+         }
+ 
+         .search-input {
+             border: none;
+             padding: 5px;
+             width: 200px;
+             border-radius: 5px 0 0 5px;
+         }
+ 
+         .search-button {
+             background-color: #495E7B;
+             color: #ffffff;
+             border: none;
+             border-radius: 0 5px 5px 0;
+             padding: 5px 10px;
+             cursor: pointer;
+         }
+ 
+         .profile {
+             display: flex;
+             align-items: center;
+         }
+ 
+         .profile img {
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             margin-right: 10px;
+         }
+ 
+         .profile span {
+             font-weight: 600;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="dashboard">
+         <div class="logo">
+             <img src="Capture d’écran 2023-06-08 à 15.19.15.png" alt="Logo">
+         </div>
+         <div class="menu">
+             <a href="#">Accueil</a>
+             <div class="search-bar">
+                <input class="search-input" type="text" placeholder="Rechercher...">
+                <button class="search-button">Rechercher</button>
+            </div>
+             <a href="#">Music/clip</a>
+             <a href="#">Film</a>
+             <a href="#">Dessin animé</a>
+         </div>
+        
+         <div class="profile">
+             <img src="Capture d’écran 2023-06-08 à 15.19.15.png" alt="Profil">
+             <span>Nom Utilisateur</span>
+         </div>
+     </div>
+ </body>
+ </html> -->
+ <!-- ::::::::::::::::::::::::::::::::::fin::::::::::::::::::::::::::::::::::::::::::::: -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .dashboard {
+            background-color: #495E7B;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #495E7B;
+        }
+
+        .menu-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .search-input {
+            border: none;
+            padding: 5px;
+            width: 100%; /* Utilize full width */
+            border-radius: 5px;
+        }
+
+        .search-button {
+            background-color: #495E7B;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile span {
+            font-weight: 600;
+        }
+
+        .video-container {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-video {
+            width: 100%; /* Utilize full width */
+            max-width: 800px;
+        }
+
+        .video-controls {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .azerty-button {
+            background-color: #495E7B;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #34495e;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="logo">
+            <img src="Capture d’écran 2023-06-08 à 15.19.15.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <a href="#">Accueil</a>
+            <div class="search-bar">
+               <input class="search-input" type="text" placeholder="Rechercher...">
+               <button class="search-button">Rechercher</button>
+           </div>
+            <a href="#">Music/clip</a>
+            <a href="#">Film</a>
+            <a href="#">Dessin animé</a>
+        </div>
+       
+        <div class="profile">
+            <img src="Capture d’écran 2023-06-08 à 15.19.15.png" alt="Profil">
+            <span>Nom Utilisateur</span>
+        </div>
+    </div>
+        <div class="video-container">
+            <video class="main-video" controls>
+                <source src="../revision/Enregistrement de l’écran 2023-03-31 à 10.30.28.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls">
+                <button class="azerty-button">azerty</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        © 2023 Votre Société. Tous droits réservés.
+    </div>
+</body>
+</html>
+
+

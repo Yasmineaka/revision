@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Formulaire de Contact</title>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:  #9090F8;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a:hover {
+    color: #5e5ea8;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #9090F8;
+    color: #fff;
+}
+
+/* contactez nous */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #9090F8;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #9090F8;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.text-success {
+    color: #28a745;
+}
+
+    </style>
+</head>
+<body>
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <div id="success-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <i class="fas fa-check-circle fa-5x text-success"></i>
+            <h4 class="mt-2">Formulaire envoyé avec succès !</h4>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        // JavaScript pour la validation du formulaire de contact
+        const contactForm = document.getElementById('contact-form');
+        const successPopup = document.getElementById('success-popup');
+        const closePopupButton = document.getElementById('close-popup');
+    
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            // Récupérer les valeurs des champs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            // Validation simple (vérifiez si les champs ne sont pas vides)
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Veuillez remplir tous les champs du formulaire.');
+            } else {
+                // Afficher la popup de confirmation
+                successPopup.style.display = 'block';
+                contactForm.reset(); // Réinitialise le formulaire
+            }
+        });
+    
+        closePopupButton.addEventListener('click', () => {
+            successPopup.style.display = 'none';
+        });
+    </script>
+    </body>
+    </html>

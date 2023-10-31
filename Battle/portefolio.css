@@ -1,0 +1,660 @@
+    /* couleur violet #9090F8,rgb(144, 144, 248) */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    section {
+        margin: 2rem;
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+    }
+    
+    /* header */
+    header {
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        background-color:  #9090F8;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    nav ul {
+        list-style-type: none;
+    }
+    h2{
+        padding: 30px;
+        font-size: 40px;
+        display: flex;
+        justify-content: start;
+    }
+    h3{
+        padding: 15px;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    a:hover {
+        color: #5e5ea8;
+        text-decoration: none;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+    /* menu beurger */
+    /* Styles pour le menu hamburger */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+.menu-mobile {
+    list-style-type: none;
+    /* margin: 0; */
+    /* padding: 0; */
+    display: none;
+    /* background-color: #333; */
+    /* position: absolute; */
+    /* top: 60px; */
+    /* left: 0; */
+    /* width: 100%; */
+}
+
+.menu-mobile.active {
+    display: block;
+    margin-top: 20px;
+}
+
+.menu-mobile li {
+    display: block;
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.menu-mobile a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.menu-mobile a:hover {
+    color: #6870E0;
+}
+    /* ====SECTION Biographie=== */
+    .biographie{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 60vh;
+        transform: scale(0.9);
+    }
+    .biographies{
+        background: rgb(112, 110, 110);
+        text-align: center;
+        padding: 15px;
+    }
+    .biographies h3{
+        color: white;
+        text-decoration: underline;
+    }
+    .biographies p{
+        color: white;
+        font-size: 20px;
+    }
+    span{
+        color: #9090F8;
+    }
+    .cv{
+        border: 1px solid ;
+        padding: 10px;
+        border-radius: 20px;
+        color: #9090F8;
+        background: rgb(112, 110, 110);
+    }
+    .cv a{
+        text-decoration: none;
+        color: #9090F8;
+    }
+    .cv a:hover{
+        color: white;
+    }
+    .cv:hover{
+        color: white;
+        background: #a3a3f6;
+    }
+
+    /* ============SECTION COMPETENCES: education et experience=============== */
+
+    #competences {
+        clear: unset; /* forcer l'affichage sous la div de l'image */
+        margin: 4rem;
+        padding: 7rem;
+        background-color: #f0f0f0;
+        border: 5px solid #a3a3f6;
+        display: flex;
+        font-family: Arial, sans-serif; 
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+    /* ====LANGUAGES==== */
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .competences {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .competence {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    /* .nom_language {
+        font-weight: bold;
+        font-size: 18px;
+        flex-grow: 1;
+        text-align: left;
+    } */
+
+    .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress-value {
+        height: 100%;
+        width: 0;
+        background-color: #009688;
+        color: #fff;
+        text-align: right;
+        line-height: 20px;
+        border-radius: 10px 0 0 10px;
+        transition: width 1s ease-in-out;
+    }
+    .progress-bar:hover .progress-value {
+        background-color: #4CAF50;
+    }
+    /*===BUTON Expérience Éducation===*/
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        margin: 0;
+        cursor: pointer;
+        border: 2px solid;
+    }
+
+    /*Contenu Expérience */
+    .experience-content,
+    .education-content{
+        background: white;
+    }
+    .experience-btn {
+        background-color: white;
+        color: #a3a3f6;
+        border-radius: 10px 0 0 10px;
+    }
+    .experience-btn:hover{
+        background-color: #a3a3f6;
+        color: white;
+    }
+    /* *{
+        border: 1px solid;
+    } */
+    li{
+        list-style: none;
+    
+    }
+    /* Contenu Éducation */
+    .education-btn {
+        background-color: white;
+        color: #a3a3f6;
+        border-radius: 0 10px 10px 0;
+    }
+    .education-btn:hover {
+        background-color: #a3a3f6;
+        color: white;
+    }
+    /* fin competence */
+
+
+
+    
+/* =============PROJETS================ */
+
+.div_historiques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section_projet {
+    width: 20%; 
+    margin-bottom: 20px; 
+    border: 1px solid #cecdcd; 
+    padding: 10px; 
+}
+
+.historique img {
+    width: 100%; 
+    height: auto; 
+}
+
+p {
+    margin-left: 12px;
+    font-size: 14px; 
+}
+.div_voir_plus{
+    margin: 12px;
+    background: white;
+    border: 3px solid #6870E0;
+    border-radius: 15px;
+    padding: 7px 15px;
+    margin-top: 25px;
+    color: #6870E0;
+}
+.div_voir_plus:hover{
+    background: #6870E0;
+    color: white;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #6870E0;
+}
+a:hover {
+    color: white;
+}
+
+span {
+    color: #6870E0;
+    font-size: 18px; 
+}
+
+/* ============FIN PROJETS============== */
+
+
+/* ===========CONTACTEZ-NOUS ========*/
+    /* .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button[type="submit"] {
+        background-color: #9090F8;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #9090F8;
+    } */
+    
+    #contact{
+        background: rgb(255, 255, 255);
+        margin: 0;
+        padding: 4rem;
+        border: none;
+    }
+
+    #contact h3{
+        text-align: center;
+        color: #8e8efd;
+        text-decoration: underline;
+    }
+    .div-contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-contact {
+        background: #a3a3f6;
+        width: 35%;
+        padding: 140px;
+        height: 600px;
+        border: 1px solid #ccc;
+        color: white;
+        border-radius: 0 10% 0 0;
+    }
+    .form-input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 2px solid #8e8efd;
+    }
+    .form-input:hover {
+        border: 2px solid white;
+    }
+
+    .description {
+        border-radius:0 0 0 10%;
+        background: #a3a3f6;
+        width: 35%;
+        padding: 140px;
+        height: 600px;
+        border: 1px solid #bcbbbb;
+        color: white;
+    }
+
+    .submit-button{
+        margin: 12px 0;
+        padding: 7px 15px;
+        background: #a3a3f6;
+        border: 2px solid white;
+        box-shadow: 1px 1px 1px 1px #8888f9;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .submit-button:hover{
+        background: white;
+        border: 2px solid white;
+        color: #a3a3f6;
+    }
+    /* popup */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+    .popup-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        position: relative;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    /* fin contactez nous */
+
+
+    /* bouton retour en haut */
+    #bouton_retour {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #9090F8;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    /* footer */
+    footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #9090F8;
+        color: #fff;
+    }
+
+
+/* RESPONSIVITÉ */
+    @media  (max-width:1800px) {
+     /* responsivité contatez-nous */
+        .form-contact {
+            width: 45%;
+            padding: 100px;
+        }
+        .description {
+        width: 45%;
+        padding: 100px;
+        }  
+    }
+    @media  (max-width:1352px) {
+      /* responsivité contatez-nous */
+        .div-contact{
+            font-size: 14px;
+        }
+        .form-input  {
+            height: 40px;  
+        }
+        .form-contact{
+            width: 55%;
+            height: 530px;
+        }
+        .description {
+            width: 55%;
+            height: 530px;
+            padding: 90px;
+        }
+        .submit-button{         
+            padding: 5px 13px;
+        }
+    
+    }
+    @media (max-width:1280px) {
+        #competences{
+            width: 90%;
+            margin: 4rem;
+            padding: 13rem;
+        }
+        /* responsivité projet */
+        .section_projet {
+            width: 25%; 
+        }
+        /* responsivité competence */
+        .experience-content,
+        .education-content{
+            width: 100%;
+            margin: -1px;
+            padding: 0;
+        }
+        .container{
+            margin: 4px;
+        }
+    }
+
+    @media (max-width:1252px) {
+        /* responsivité competence */
+        #competences{
+            display: block;
+            border: none;
+        }
+        .container{
+            margin: 20px;
+        }
+    }
+    @media (max-width:1020px) {
+        /* responsivité projet */
+        .section_projet {
+            width: 27%; 
+        }
+    }
+    @media (max-width:1012px) {
+        /* responsivité contactez-nous */
+        .form-label-input,
+        .description{
+            padding: 30px;
+        }
+       .description,
+       .form-contact{
+        height: 420px;      
+       }
+        .form-contact {
+            padding: 20px;
+        }
+        /* responsivité projet */
+        .section_projet {
+            padding: 5px;
+            width: 40%; 
+        }
+        .container{
+            margin: 0 auto;
+        }
+        #competences{
+            width: 100%;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            margin-top: 20rem;
+        }
+    }
+    @media (max-width:800px) {
+        /* responsivité biographie */
+        .biographie img{
+            height: 500px;
+        }
+         /* responsivité competence */
+        section{
+            display: block;
+        }
+        #competences{
+            margin-top: -1%;
+        }
+        .competences{
+            width: 100%;
+        }
+        #competences .container{
+            margin:0;
+            width: 100%;
+            margin-left: -1px;
+        }
+        /* responsivité competence */
+        .description,.form-contact{
+            width: 100%;
+        }
+        .form-input{
+            width: 100%;
+            margin: 2px 0;
+            margin-top: 15px;
+        }
+        /* responsivité contatez-nous */
+        #contact{
+            padding: 0;
+            margin-bottom: 15px;
+        }
+    }
+/* Media query pour mon menu hamburger des petits écrans */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+
+    .hamburger-menu {
+        margin-top: -60px;
+        margin-right: 25px;
+        display: flex;
+        align-items: end;
+
+    }
+
+}
+
+    @media  (max-width:650px) {
+         /* responsivité projet */
+         .section_projet {
+            width: 90%; 
+        }
+         /* responsivité contactez-nous */
+        .div-contact{
+            text-align: center;
+          display: block;
+        }
+        .description,.form-contact{
+            width: 100%;
+        }     
+        .form-label-input{
+            padding: 0 30px ;
+        }
+    }
+    @media (max-width:465px) {
+        /* responsivité biographie */
+        .text-animation .letters {
+            font-size: 14px;
+        }
+        .biographies h3{
+            font-size: 20px;
+        }
+        /* responsivité competence */
+        .container h2{
+            font-size: 22px;
+        }
+        section{
+            width: 100%;
+        }
+        .container{
+            width: 90%;
+        }
+         /* responsivité projet*/
+         #projets h2{
+            font-size: 22px;
+         }
+    }
+    @media (max-width:400px) {
+        /* responsivité biographie */
+          .biographie img{
+            height: 400px;
+        }
+        /* responsivité competence */
+        .competence{ 
+            width: 90%;
+        }
+    }

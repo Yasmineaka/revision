@@ -1,0 +1,79 @@
+ <header>
+        <h4 style="display:inline; box-shadow: 1px 2px 1px white;">Aka Aménan Yasmine</h4>
+       <hr>
+        <nav>
+            <ul>
+                <li><a href="#biographie">Biographie</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="biographie">
+        <img class="biographie" src="livre-ouvert-cote-lapto.jpg" alt="">
+        <div class="biographies" >
+            <h3>Qui suis-je ?</h3>
+            <div class="text-animation">
+                <p class="letters">Je suis Yasmine Aka Aménan étudiante en <span>licence 2</span> à l'université virtuelle de Côte d'Ivoire (<span>UVCI</span>) en informatique et science du numérique (<span>ISN</span>) en spécialité réseau et sécurité informatique (<span>RSI</span>), <br> Par ailleur étudiante de la génération 6.23 de la <span>NaN Academy</span> en spécialité <span>python</span>.</p>
+            </div>
+            <button class="cv"><a href="">Telecharger CV</a></button>
+        </div>
+    </section>
+
+
+    <script src="">
+        // Vous pouvez ajouter ce script si vous souhaitez que l'animation démarre lors du chargement de la page.
+document.addEventListener("DOMContentLoaded", function() {
+  const text = document.querySelector(".letters");
+  text.innerHTML = text.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+  const animation = text.querySelector(".text-animation");
+  animation.style.width = "auto";
+});
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+/* .text-animation {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap; */
+    /* white-space: nowrap; Empêche le texte de passer à la ligne */
+    /* overflow: hidden; Cache le texte qui dépasse */
+    /* border-right: 2px solid #333; 
+    animation: typing 3s steps(20, end), blink-caret 0.99s step-end infinite;
+  } */
+  
+  /* Animation pour taper le texte lettre par lettre */
+  /* @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  } */
+  
+  /* Animation pour le curseur clignotant */
+  /* @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    auto {
+      border-color: #4b4a4a;
+    }
+  } */
+  

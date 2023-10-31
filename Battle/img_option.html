@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown with Images</title>
+    <style>
+        /* Style for the custom dropdown container */
+        .custom-dropdown {
+            position: relative;
+            width: 200px;
+        }
+
+        /* Style for the hidden native select */
+        .custom-dropdown select {
+            display: none;
+        }
+
+        /* Style for the custom dropdown display area */
+        .custom-dropdown .dropdown-display {
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for the dropdown arrow */
+        .custom-dropdown .dropdown-arrow {
+            margin-left: auto;
+            transform: rotate(90deg);
+            transition: transform 0.2s;
+        }
+
+        /* Style for the dropdown options container */
+        .custom-dropdown .dropdown-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            display: none;
+            flex-direction: column;
+        }
+
+        /* Style for individual dropdown options */
+        .custom-dropdown .dropdown-option {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for the option image */
+        .custom-dropdown .dropdown-image {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        /* Hover effect on dropdown options */
+        .custom-dropdown .dropdown-option:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-dropdown">
+        <select id="my-select">
+            <option value="option1" data-image="image1.jpg">Option 1</option>
+            <option value="option2" data-image="image2.jpg">Option 2</option>
+            <option value="option3" data-image="image3.jpg">Option 3</option>
+        </select>
+        <div class="dropdown-display">
+            <span id="selected-option">Select an option</span>
+            <div class="dropdown-arrow">&#9660;</div>
+        </div>
+        <div class="dropdown-options">
+            <div class="dropdown-option" data-value="option1">
+                <img class="dropdown-image" src="../aya_yop.jpeg" alt="Option 1">
+                Option 1
+            </div>
+            <div class="dropdown-option" data-value="option2">
+                <img class="dropdown-image" src="../aya_yop.jpeg" alt="Option 2">
+                Option 2
+            </div>
+            <div class="dropdown-option" data-value="option3">
+                <img class="dropdown-image" src="../aya_yop.jpeg" alt="Option 3">
+                Option 3
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const selectElement = document.getElementById('my-select');
+        const selectedOptionDisplay = document.getElementById('selected-option');
+        const dropdownOptions = document.querySelector('.custom-dropdown .dropdown-options');
+        const dropdownArrow = document.querySelector('.custom-dropdown .dropdown-arrow');
+
+        // Initialize the selected option display
+        selectedOptionDisplay.textContent = "Select an option";
+
+        // Show/hide dropdown options when the display area is clicked
+        dropdownOptions.addEventListener('click', function () {
+            dropdownOptions.style.display = 'none';
+            dropdownArrow.style.transform = 'rotate(90deg)';
+        });
+
+        // Handle selecting a dropdown option
+        dropdownOptions.querySelectorAll('.dropdown-option').forEach(option => {
+            option.addEventListener('click', function () {
+                const selectedValue = this.getAttribute('data-value');
+                const selectedText = this.textContent;
+                const selectedImage = this.querySelector('.dropdown-image').getAttribute('src');
+
+                selectedOptionDisplay.textContent = selectedText;
+
+                // You can use the selectedValue, selectedText, and selectedImage as needed
+
+                dropdownOptions.style.display = 'none';
+                dropdownArrow.style.transform = 'rotate(90deg)';
+            });
+        });
+
+        // Show/hide dropdown options when the display area is clicked
+        selectedOptionDisplay.addEventListener('click', function () {
+            if (dropdownOptions.style.display === 'none' || dropdownOptions.style.display === '') {
+                dropdownOptions.style.display = 'block';
+                dropdownArrow.style.transform = 'rotate(-90deg)';
+            } else {
+                dropdownOptions.style.display = 'none';
+                dropdownArrow.style.transform = 'rotate(90deg)';
+            }
+        });
+    </script>
+</body>
+</html>

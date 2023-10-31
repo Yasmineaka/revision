@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Navigation Bar</title>
+  <script src="https://kit.fontawesome.com/06926d17a6.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(240, 235, 235);
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.container .cog {
+  position: absolute;
+  top: 5px;
+  left: 145px;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+}
+
+.cogleft {
+  top: 5px;
+  left: -20px !important;
+  transform: rotate(1turn);
+  transition: all 0.7s ease-in-out;
+}
+
+.container .cog i {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.container .cog i:hover {
+  color: #fff;
+}
+
+.container .sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  background-color: rgb(106, 5, 124);
+  transition: all 0.7s ease-in-out;
+}
+
+.sidebarleft {
+  margin-left: -180px;
+}
+
+.container .sidebar h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 20px;
+}
+
+ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+li a {
+  color: rgba(255, 255, 255, 0.486);
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.fas {
+  padding: 20px;
+}
+
+.social {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social .fa {
+  padding: 15px;
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.486);
+  background-color: rgb(54, 1, 63);
+  border-radius: 50%;
+}
+
+.social .fa:hover {
+  padding: 15px;
+  margin-right: 8px;
+  color: rgba(255, 255, 255, 0.486);
+  background-color: rgb(54, 1, 63);
+  color: #fff;
+  cursor: pointer;
+}
+
+.main_content {
+  margin-left: 200px;
+  transition: all 0.7s ease-in-out;
+}
+
+.marginLeft {
+  margin-left: 20px;
+}
+
+.main_content .header {
+  height: 50px;
+  background-color: rgb(231, 227, 227);
+  line-height: 50px;
+  width: 100vw;
+}
+
+.main_content p {
+  padding-left: 5px;
+}
+
+.main_content .info p {
+  padding-bottom: 10px;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="cog">
+      <i class="fas fa-cog"></i>
+    </div>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+
+      <ul>
+        <li>
+          <a href="#"><i class="fas fa-home"></i>Home</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-user"></i>Profile</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-address-card"></i>About</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-project-diagram"></i>Portefolio</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-blog" aria-hidden="true"></i>Blogs</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-address-book" aria-hidden="true"></i>Contact</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-map-pin" aria-hidden="true"></i>Map</a>
+        </li>
+      </ul>
+      <div class="social">
+        <div class="facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </div>
+        <div class="twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+        <div class="instagrame">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="header">
+        <p>Welcome!! Have nice day.</p>
+      </div>
+      <div class="info">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem magni perspiciatis nemo.
+        </p>
+        <p>
+          Recusandae, eligendi? Esse quia architecto odio iusto, nostrum
+          voluptatem nihil consectetur. Similique ad culpa itaque laborum
+          tempore ratione tempora iste molestiae.
+        </p>
+        <p>
+          Temporibus facere commodi neque unde, odio excepturi aliquam
+          provident.
+        </p>
+        <p>
+          Ipsam aperiam repudiandae possimus suscipit quasi iure provident
+          reprehenderit eaque ex animi quo sit id omnis officia, facere
+          recusandae<br />
+          libero ad iste molestiae tempore odio nobis deserunt sapiente.
+        </p>
+        <p>
+          Officiis deleniti debitis consectetur, numquam necessitatibus
+          eveniet eos fuga amet.
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="app.js">
+    const btnCog = document.querySelector(".cog");
+const mainContent = document.querySelector(".main_content");
+const sidebar = document.querySelector(".sidebar");
+
+btnCog.addEventListener("click", () => {
+  btnCog.classList.toggle("cogleft");
+  mainContent.classList.toggle("marginLeft");
+  sidebar.classList.toggle("sidebarleft");
+});
+
+  </script>
+</body>
+</html>

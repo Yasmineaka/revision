@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options avec Images</title>
+    <!-- Incluez les fichiers CSS de Chosen -->
+    <link rel="stylesheet" href="chosen.min.css">
+</head>
+<body>
+    <select data-placeholder="Sélectionnez une option..." class="chosen-select" multiple tabindex="2">
+        <option value=""></option>
+        <option value="option1" data-img-src="img-1.png">Option 1</option>
+        <option value="option2" data-img-src="img-2.png">Option 2</option>
+        <option value="option3" data-img-src="img-3.png">Option 3</option>
+        <option value="option4" data-img-src="img-4.png">Option 4</option>
+    </select>
+
+    <!-- Incluez le fichier JavaScript de Chosen -->
+    <script src="chosen.jquery.min.js"></script>
+    <script>
+        // Initialisez Chosen sur votre sélecteur
+        $(".chosen-select").chosen({
+            disable_search_threshold: 10,
+            no_results_text: "Aucun résultat trouvé",
+            width: "100%"
+        });
+    </script>
+</body>
+</html>

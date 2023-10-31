@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences</title>
+    <style>
+        section {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .skill {
+            width: calc(50% - 20px);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+   
+
+        .skill-name {
+            font-weight: bold;
+            font-size: 18px;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-value {
+            height: 100%;
+            width: 0;
+            background-color: #009688;
+            color: #fff;
+            text-align: right;
+            line-height: 20px;
+            border-radius: 10px 0 0 10px;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Ajout de styles au survol de la souris */
+        .progress-bar:hover .progress-value {
+            background-color: #4CAF50;
+        }
+           /* Style des boutons */
+           .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 0;
+            cursor: pointer;
+            border: 2px solid;
+        }
+        .experience-btn {
+            background-color: white;
+            color: #a3a3f6;
+            border-radius: 10px 0 0 10px;
+        }
+        .experience-btn:hover{
+            background-color: #a3a3f6;
+            color: white;
+        }
+        li{
+            list-style: none;
+           
+        }
+        .education-btn {
+            background-color: white;
+            color: #a3a3f6;
+            border-radius: 0 10px 10px 0;
+        }
+        .education-btn:hover {
+            background-color: #a3a3f6;
+            color: white;
+        }
+        *{
+            border: 1px solid;
+        }
+    @media (max-width:800px) {
+        section{
+            display: block;
+        }
+        .container{
+            width: 70%;
+        }
+    }
+    @media (max-width:465px) {
+        section{
+            width: 100%;
+        }
+        .container{
+            width: 90%;
+        }
+    }
+    @media (max-width:400px) {
+        .skill{ 
+            width: 90%;
+        }
+    }
+    </style>
+</head>
+<section>
+    <div class="container">
+        <h1>Compétences</h1>
+        <p>Voici quelques-unes de mes compétences :</p>
+        <div class="skills">
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div  class="skill-name" style="display: flex;justify-content: end;">100%</div>
+                <div class="progress-bar">
+                    <div class="progress-value" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div  class="skill-name" style="display: flex;justify-content: end;">90%</div>
+                <div class="progress-bar">
+                    <div class="progress-value" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div  class="skill-name" style="display: flex;justify-content: end;">80%</div>
+                <div class="progress-bar">
+                    <div class="progress-value" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">React</div>
+                <div  class="skill-name" style="display: flex;justify-content: end;">70%</div>
+                <div class="progress-bar">
+                    <div class="progress-value" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="btn-container">
+            <button class="btn experience-btn" onclick="showSkills('experience')">Expérience</button>
+            <button class="btn education-btn" onclick="showSkills('education')">Éducation</button>
+        </div>
+
+        <!-- Contenu Expérience -->
+        <section class="experience-content" style="display: none;">
+            <div class="container">
+                <h2>Expérience</h2>
+                <p>Voici mon expérience professionnelle :</p>
+                <ul>
+                    <li>Travail en tant que développeur web senior chez ABC Company.</li>
+                    <li>Projets majeurs réalisés pour XYZ Corporation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contenu Éducation -->
+        <section class="education-content" style="display: none;">
+            <div class="container">
+                <h2>Éducation</h2>
+                <p>Voici mes antécédents éducatifs :</p>
+                <ul>
+                    <li>Diplôme en informatique de l'Université XYZ.</li>
+                    <li>Formation avancée en développement web.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+
+<script>
+    function showSkills(category) {
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => button.classList.remove('active'));
+        document.querySelector(`.btn.${category}-btn`).classList.add('active');
+
+        // Cacher le contenu actif
+        const activeContent = document.querySelector('.active-content');
+        if (activeContent) {
+
+            activeContent.style.display = 'none';
+            activeContent.classList.remove('active-content');
+        }
+
+        // Afficher le contenu correspondant
+        const contentToShow = document.querySelector(`.${category}-content`);
+        if (contentToShow) {
+            contentToShow.style.display = 'block';
+            contentToShow.classList.add('active-content');
+        }
+    }
+
+    // Afficher les compétences "Expérience" par défaut
+    showSkills('experience');
+</script>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="portefolio.css">
+    <title>Mon Portfolio</title>
+</head>
+<body>
+    <header>
+        <h4 style="display:inline; box-shadow: 1px 2px 1px white;">Aka Aménan Yasmine</h4>
+       <hr>
+        <nav>
+            <ul class="menu">
+                <li><a href="#biographie">Biographie</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <!-- <li><a href="#experience">Expérience</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu-mobile">
+                <li><a href="#biographie">Biographie</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ========SECTION Biographie============ -->
+    <section id="biographie" class="biographie">
+        <img class="biographie" src="livre-ouvert-cote-lapto.jpg" alt="">
+        <div class="biographies" >
+            <h3>Qui suis-je ?</h3>
+            <div class="text-animation">
+                <p class="letters">Je suis Yasmine Aka Aménan étudiante en <span>licence 2</span>à l'université virtuelle de Côte d'Ivoire (<span>UVCI</span>) en informatique et science du numérique (<span>ISN</span>) en spécialité réseau et sécurité informatique(<span>RSI</span>), <br> Par ailleur étudiante de la génération 6.23 de la <span>NaN Academy</span> en spécialité <span>python</span>.</p>
+            </div>
+            <button class="cv"><a href="">Telecharger CV</a></button>
+        </div>
+    </section>
+
+    <!-- ============SECTION COMPETENCES: education et experience=============== -->
+    <section id="competences"  style="background: white;">
+        <div class="container">
+            <h2 >Compétences</h2> 
+            <!-- ====LANGUAGES==== -->
+            <p>Voici quelques-unes de mes compétences :</p>
+            <div class="competences">
+                <div class="competence">
+                    <div class="nom_language">HTML</div>
+                    <div  class="nom_language" style="display: flex;justify-content: end;">95%</div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 95%; background-color: orangered;"></div>
+                    </div>
+                </div>
+                <div class="competence">
+                    <div class="nom_language">CSS</div>
+                    <div  class="nom_language" style="display: flex;justify-content: end;">85%</div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 90%;background-color: rgb(96, 96, 245);"></div>
+                    </div>
+                </div>
+                <div class="competence">
+                    <div class="nom_language">JavaScript</div>
+                    <div  class="nom_language" style="display: flex;justify-content: end;">5%</div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 5%; background-color: yellow;"></div>
+                    </div>
+                </div>
+                <div class="competence">
+                    <div class="nom_language">Python</div>
+                    <div  class="nom_language" style="display: flex;justify-content: end;">50%</div>
+                    <div class="progress-bar">
+                        <div class="progress-value" style="width: 50%; background: linear-gradient(to left , yellow, rgb(106, 106, 245));"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!--===BUTON Expérience Éducation===-->
+            <div class="btn-container">
+                <button class="btn experience-btn" onclick="showcompetences('experience')">Expérience</button>
+                <button class="btn education-btn" onclick="showcompetences('education')">Éducation</button>
+            </div>
+    
+            <!--Contenu Expérience-->
+            <section class="experience-content" style="display: none;">
+                <div class="container">
+                    <h5>Expérience</h5>
+                    Expérience professionnelle : <br>
+                    - 10 moi de formation pratique a NaN Academy <br>
+                    Avec plus de 10 projets realisés en dehors des séances de coding sur 2h.
+                </div>
+            </section>
+    
+            <!--Contenu Éducation-->
+            <section class="education-content" style="display: none;">
+                <div class="container">
+                    <!-- <h5>Éducation</h5>
+                    Antécédents éducatifs : <br>
+                    Primaire: <br>
+                    ... <br>
+                    Sécondaire <br>
+                    ... <br> -->
+                    Universitaire <br>
+                    Université Virtuelle de Côte d'Ivoire (UVCI): filière Informatique et Science du Numérique (ISN): spécialité Réseau et Sécurité Informatique (RSI)
+                    Formation avancée en développement web. <br>
+                    Formation <br>
+                    -NaN digital academy <br>
+                    -Mel academy
+                </div>
+            </section>
+        </div>
+    </section>
+    
+    <!-- ===============PROJETS===================== -->
+
+    <div id="projets">
+        <h3 style="margin-left: 12px;">Projets</h3>
+        <div class="div_historiques">
+            <section class="section_projet">
+                <div class="historique">
+                    <div style="display: block;" class="historique">
+                        <img src="img-3.png" alt="">
+                        <p><span>Projet du moi de février</span> <br> zerty ertyui kjh zaert zsdfgh zer zer gf gfdsq UYGTFRDESZ HGFDSQ jghfdsd jhgfds jhgfgfds</p>
+                        <div>
+                            <button class="div_voir_plus"><a href="">Voir</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section_projet">
+                <div class="historique">
+                    <div style="display: block;" class="historique">
+                        <img src="img-3.png" alt="">
+                        <p><span>Projet du moi de février</span> <br> zerty ertyui kjh zaert zsdfgh zer zer gf gfdsq UYGTFRDESZ HGFDSQ jghfdsd jhgfds jhgfgfds</p>
+                        <div>
+                            <button class="div_voir_plus"><a href="">Voir</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section_projet">
+                <div class="historique">
+                    <div style="display: block;" class="historique">
+                        <img src="img-3.png" alt="">
+                        <p><span>Projet du moi de février</span> <br> zerty ertyui kjh zaert zsdfgh zer zer gf gfdsq UYGTFRDESZ HGFDSQ jghfdsd jhgfds jhgfgfds</p>
+                        <div>
+                            <button class="div_voir_plus"><a href="">Voir</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section_projet">
+                <div class="historique">
+                    <div style="display: block;" class="historique">
+                        <img src="img-3.png" alt="">
+                        <p><span>Projet du moi de février</span> <br> zerty ertyui kjh zaert zsdfgh zer zer gf gfdsq UYGTFRDESZ HGFDSQ jghfdsd jhgfds jhgfgfds</p>
+                        <div>
+                            <button class="div_voir_plus"><a href="">Voir</a></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+      <!-- ================EXPERIENCE=================== -->
+
+    <!-- <section style="background: rgb(255, 255, 255);" id="experience">
+        <h2>Expérience</h2>
+        <div class="text-animation">
+            <span class="letters">Aucune pour l'instant</span>
+          </div>
+    </section> -->
+
+
+    <!-- ================CONTACT=================== -->
+    
+    <section id="contact">
+        <h3>Contactez-moi</h3> 
+            <!--==CONTACTEZ-NOUS==-->
+
+            <div class="div-contact">
+                <div class="description">
+                    <h4 style="text-align: center;">Localisation:</h4>
+                    <p>PAYS: Côte d'Ivoire</p><hr>
+                    <p>VILLE: Abidjan</p><hr>
+                    <p>CONTACT: 0789999999 / 1152672898</p><hr>
+                    <p>whatsapp: 0789999999 / lien vers whatsapp <a href="">aazertyu</a></p><hr>
+                </div>
+                <div class="form-contact">
+                    <form action="" method="POST">
+                        <div class="form-label-input" style="margin-top: -22px;">
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="nom" name="nom" class="form-input" required>
+        
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+        
+                            <label for="message">Message :</label>
+                            <textarea style="height: 100px;" id="message" name="message" class="form-input" required></textarea>
+        
+                            <button type="submit" class="submit-button">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- <h2>Contactez-nous</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form> -->
+
+
+        </section>
+        <!--==POPUP==-->
+        <div class="modal" id="success-popup">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <i class="fas fa-check-circle fa-5x text-success"></i>
+                        <h4 class="mt-2">Formulaire envoyé avec succès !</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <i id="bouton_retour" class='bx bx-up-arrow-alt'></i>
+    <footer>
+        <p>&copy; 2023 portefolio Aka Aménan Yasmine</p>
+        <p style="font-size: 25px;"><i class='bx bxl-linkedin-square'></i> <i class='bx bxl-whatsapp'></i>  <i class='bx bxl-github'></i> <i class='bx bx-phone-call'></i>  </p>
+    </footer>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="portefolio.js"></script>
+
+</body>
+</html>
+
+
